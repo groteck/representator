@@ -16,7 +16,19 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#javascript
 gem 'jquery-rails'
+
+#users
+gem 'devise'
+
+#forms
+gem "simple_form"
+
+#haml
+gem 'haml-rails'
+gem 'haml'
+gem "haml_scaffold"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -33,4 +45,8 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
+  gem "rspec-rails"
+  gem "guard-rspec"
+  gem "spork"
+  gem "guard-spork"
 end
