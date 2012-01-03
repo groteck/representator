@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% if user_signed_in? %>
+    <div class="user_bar">
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      <%= link_to('Edit registration', edit_user_registration_path) %>
+    </div>
+  <% end %>
 <%= yield %>
 
 </body>
