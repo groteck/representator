@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Legal name:
+  = @client.legal_name
+%p
+  %b Trade name:
+  = @client.trade_name
+%p
+  %b Nif:
+  = @client.nif
+%p
+  %b Address:
+  = @client.address
+%p
+  %b User:
+  = @client.user_id
+%p
+  %b Telephone:
+  = @client.telephone
+%p
+  %b Email:
+  = @client.email
+
+= link_to 'Edit', edit_client_path(@client)
+\|
+= link_to 'Back', clients_path

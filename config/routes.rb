@@ -1,4 +1,6 @@
 Representator::Application.routes.draw do
+  resources :clients
+
   resources :groups
 
   devise_for :users
