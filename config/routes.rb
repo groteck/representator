@@ -1,4 +1,10 @@
 Representator::Application.routes.draw do
+  resources :services
+
+  resources :invoices
+
+  match '/autocomplete/clients' => "autocomplete#clients"
+
   resources :clients
 
   resources :groups

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  discount1: 1
+  discount2: 1
+  discount3: 1
+  user_id: 1
+  paid_concept: MyString
+
+two:
+  discount1: 1
+  discount2: 1
+  discount3: 1
+  user_id: 1
+  paid_concept: MyString

@@ -24,6 +24,7 @@ gem 'devise'
 
 #forms
 gem "simple_form"
+gem 'rails3-jquery-autocomplete'
 
 #haml
 gem 'haml-rails'

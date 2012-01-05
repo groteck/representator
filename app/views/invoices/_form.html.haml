@@ -1,0 +1,13 @@
+= simple_form_for(@invoice) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :discount1
+    = f.input :discount2
+    = f.input :discount3
+    = f.input :client_legal_name
+    = f.hidden_field :client_id 
+    = f.input :paid_concept
+
+  .actions
+    = f.button :submit

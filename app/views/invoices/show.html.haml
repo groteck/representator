@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Discount1:
+  = @invoice.discount1
+%p
+  %b Discount2:
+  = @invoice.discount2
+%p
+  %b Discount3:
+  = @invoice.discount3
+%p
+  %b Client:
+  = @invoice.client.legal_name
+%p
+  %b Paid concept:
+  = @invoice.paid_concept
+
+= link_to 'Edit', edit_invoice_path(@invoice)
+\|
+= link_to 'Back', invoices_path

@@ -1,0 +1,27 @@
+%h1 Listing invoices
+
+%table
+  %tr
+    %th Discount1
+    %th Discount2
+    %th Discount3
+    %th User
+    %th Paid concept
+    %th
+    %th
+    %th
+
+  - @invoices.each do |invoice|
+    %tr
+      %td= invoice.discount1
+      %td= invoice.discount2
+      %td= invoice.discount3
+      %td= invoice.user_id
+      %td= invoice.paid_concept
+      %td= link_to 'Show', invoice
+      %td= link_to 'Edit', edit_invoice_path(invoice)
+      %td= link_to 'Destroy', invoice, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Invoice', new_invoice_path
