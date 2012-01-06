@@ -4,6 +4,7 @@ Representator::Application.routes.draw do
   resources :invoices
 
   match '/autocomplete/clients' => "autocomplete#clients"
+  match '/autocomplete/services' => "autocomplete#services"
 
   resources :clients
 

@@ -7,6 +7,10 @@
     = f.input :discount3
     = f.input :client_legal_name
     = f.hidden_field :client_id 
+    #services
+      = f.simple_fields_for :invoice_services, :wrapper => 'inline' do |invoice_service|
+        = render 'invoice_services_fields', :f => invoice_service
+      = link_to_add_association 'add a Service', f, :invoice_services, :render_options => { :wrapper => 'inline' }
     = f.input :paid_concept
 
   .actions

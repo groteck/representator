@@ -8,6 +8,19 @@ class InvoicesController < ApplicationController
     end               
   end                 
 
+  def service_description       
+    Service.find(service_id).name if service_id
+  end                 
+  
+  def service_description=(description)
+    service= Service.find_by_description(description)
+    if service           
+      self.service_id = service.id
+    else              
+      errors[:service_description] << "Invalid description entered"
+    end               
+  end                 
+
   def client_legal_name       
     Cliemt.find(client_id).name if client_id
   end                 
