@@ -68,9 +68,10 @@ class InvoicesController < ApplicationController
   def create
     params[:invoice][:user_id]= current_user.id
     @invoice = Invoice.new(params[:invoice])
-
+    
     respond_to do |format|
       if @invoice.save
+        params[:services].each_value {|service| @invoice.services << Service.find_by_description(service)}
         format.html { redirect_to @invoice, notice: 'Invoice was successfully created.' }
         format.json { render json: @invoice, status: :created, location: @invoice }
       else

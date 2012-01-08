@@ -14,10 +14,9 @@
   = @invoice.client.legal_name
 %p
   %b Services:
-  - @invoice.invoice_services.each do |s|
-    - service = Service.find(s.id)
-    = service.description
-    = service.price
+  - @invoice.services.each do |service|
+    =service.description
+    
 %p
   %b Paid concept:
   = @invoice.paid_concept

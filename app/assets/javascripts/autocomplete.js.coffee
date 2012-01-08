@@ -5,7 +5,5 @@ $(document).ready ->
          $('#invoice_client_legal_name').autocomplete
                  source: "/autocomplete/clients"
                  select: (event,ui) -> $("#invoice_client_id").val(ui.item.id)
-$(document).ready ->
-         $('#invoice_service_service_description').autocomplete
-                 source: "/autocomplete/services"
-                 select: (event,ui) -> $("#invoice_service_service_id").val(ui.item.id)
+
+                 

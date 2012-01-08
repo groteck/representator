@@ -1,6 +1,6 @@
 class Invoice < ActiveRecord::Base
   has_many :invoice_services
-  has_many :services, :through => :invoice_service
+  has_many :services, :through => :invoice_services
   belongs_to :client
   belongs_to :user
   attr_writer :client_legal_name
