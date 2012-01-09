@@ -7,9 +7,10 @@
     = f.input :discount3
     = f.input :client_legal_name
     = f.hidden_field :client_id 
-    .formulario
-    %a#add{:href => "#"} Add_services
     = f.input :paid_concept
-
+    .formulario
+      %div.autoselect
+        = f.collection_select :service_ids, Service.all, :id, :description, {include_blank: true}, {class: :hidden}
+    %a#add{:href => "#"} Add_services
   .actions
     = f.button :submit
